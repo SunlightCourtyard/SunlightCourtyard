@@ -1,3 +1,9 @@
-document.getElementsByTagName("nav").querySeletorAll('a').forEach(button => {  
-    button.addEventListener("click", function(event))
+const navButtons = document.querySelector('nav').querySeletorAll('a')
+
+navButtons.forEach(button => {  
+    button.addEventListener("click", function() {
+        navButtons.forEach(button => button.classList.remove("active"));
+        this.classList.add("active");
+        window.alert("test");
+    })
 });

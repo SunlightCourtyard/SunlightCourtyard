@@ -64,6 +64,10 @@ nav a:hover {
     border-color: var(--secondary-accent);
 }
 
+.active {
+    background-color: var(--active);
+}
+
 main {
     background-color: var(--background-color);
     color: var(--text-color);
