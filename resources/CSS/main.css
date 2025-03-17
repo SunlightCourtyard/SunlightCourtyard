@@ -3,14 +3,17 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    scroll-margin-top: 5em;
 }
 
 :root {
     --background-color: #1a1a1a;
     --text-color: #fff;
+    --text-colorflip: #000;
     --containers: #252525;
     --accent: #e74c3c;
-    --secondary-accent: #c0392b;
+    --secondary-accent: #9B1C1C;
+    --active: #b22222;
 }
 
 body {
@@ -31,9 +34,8 @@ header {
     background-color: var(--containers);
     height: 5em;
     width: 100%;
-    position: absolute;
+    position: fixed;
     z-index: 2;
-    margin-top: 0;
 }
 
 nav {
@@ -41,7 +43,25 @@ nav {
     justify-content: space-around;
     position: relative;
     width: 75%;
-    top: 25%;
+    top: 30%;
+}
+
+nav a{
+    background-color: var(--secondary-accent);
+    color: var(--text-color);
+    padding: 0.5em;
+    border: 1px solid var(--accent);
+    border-radius: 1em;
+    width: 5.5em;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+nav a:hover {
+    color: var(--text-colorflip);
+    background-color: var(--accent);
+    border-color: var(--secondary-accent);
 }
 
 main {
@@ -56,5 +76,9 @@ main {
 }
 
 #projects {
+    height: 30em;
+}
+
+#languages {
     height: 30em;
 }
