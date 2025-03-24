@@ -66,6 +66,8 @@ nav a:hover {
 
 .active {
     background-color: var(--active);
+    border-radius: 1em;
+    transition: 1s;
 }
 
 main {
