@@ -13,7 +13,8 @@
     --containers: #252525;
     --accent: #e74c3c;
     --secondary-accent: #9B1C1C;
-    --active: #b22222;
+    --active: #FF3131;
+    --active-border: #ff0000;
 }
 
 body {
@@ -36,6 +37,9 @@ header {
     width: 100%;
     position: fixed;
     z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 nav {
@@ -43,16 +47,15 @@ nav {
     justify-content: space-around;
     position: relative;
     width: 75%;
-    top: 30%;
 }
 
 nav a{
     background-color: var(--secondary-accent);
     color: var(--text-color);
     padding: 0.5em;
-    border: 1px solid var(--accent);
+    border: 2px solid var(--accent);
     border-radius: 1em;
-    width: 5.5em;
+    width: 5.6em;
     text-align: center;
     text-decoration: none;
     font-weight: bolder;
@@ -62,12 +65,23 @@ nav a:hover {
     color: var(--text-colorflip);
     background-color: var(--accent);
     border-color: var(--secondary-accent);
+    transition: 500ms;
 }
 
 .active {
     background-color: var(--active);
-    border-radius: 1em;
+    color: var(--text-colorflip);
     transition: 1s;
+    border: 2px solid var(--active-border);
+    width: 6em;
+}
+
+button {
+    width: 5.6em;
+    display: flex;
+    justify-content: space-around;
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
 main {
