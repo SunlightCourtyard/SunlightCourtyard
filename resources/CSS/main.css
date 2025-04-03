@@ -6,8 +6,10 @@
     scroll-margin-top: 5em;
 }
 
+/* Default(darkmode) colours */
 :root {
     --background-color: #1a1a1a;
+    --background-color2: #181818;
     --text-color: #fff;
     --text-colorflip: #000;
     --containers: #252525;
@@ -17,9 +19,23 @@
     --active-border: #ff0000;
 }
 
+/* Lightmode colours */
+.lightmode {
+    --background-color: #fff;
+    --background-color2: #d4d4d4;
+    --text-color: #333;
+    --text-colorflip: #fff;
+    --containers: #f7f7f7;
+    --accent: #4a90e2;
+    --secondary-accent: #50e3c2;
+    --active: #1e3a8a;
+    --active-border: #6ba7f2;
+}
+
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    background-color: var(--background-color);
 }
 
 img, picture, video, canvas, svg {
@@ -31,6 +47,7 @@ input, button, textarea, select {
     font: inherit;
 }
 
+/* header and nav style */
 header {
     background-color: var(--containers);
     height: 5em;
@@ -82,13 +99,18 @@ button {
     justify-content: space-around;
     color: var(--text-color);
     background-color: var(--background-color);
+    padding: 0.2em 0.2em;
+    border-radius: 1em;
 }
 
+/* main and sections style */
 main {
-    background-color: var(--background-color);
+    background-color: var(--background-color2);
     color: var(--text-color);
     top: 5em;
     position: relative;
+    width: 85%;
+    margin: 0 auto 2em;
 }
 
 #about {
@@ -101,4 +123,13 @@ main {
 
 #languages {
     height: 30em;
+}
+
+/* footer style */
+footer {
+    display: relative;
+    width: 100%;
+    bottom: 0;
+    height: 10em;
+    margin-top: 6em;
 }
