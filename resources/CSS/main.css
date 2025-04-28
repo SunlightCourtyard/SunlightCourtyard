@@ -21,13 +21,13 @@
 
 /* Lightmode colours */
 .lightmode {
-    --background-color: #fff;
-    --background-color2: #d4d4d4;
+    --background-color: #dee4e7;
+    --background-color2: #fff;
     --text-color: #333;
     --text-colorflip: #fff;
-    --containers: #f7f7f7;
+    --containers: #50e3c2;
     --accent: #4a90e2;
-    --secondary-accent: #50e3c2;
+    --secondary-accent: #6ba7f2;
     --active: #1e3a8a;
     --active-border: #6ba7f2;
 }
@@ -50,6 +50,7 @@ input, button, textarea, select {
 /* header and nav style */
 header {
     background-color: var(--containers);
+    top: 0;
     height: 5em;
     width: 100%;
     position: fixed;
@@ -101,6 +102,7 @@ button {
     background-color: var(--background-color);
     padding: 0.2em 0.2em;
     border-radius: 1em;
+    transition: 250ms;
 }
 
 /* main and sections style */
@@ -111,6 +113,24 @@ main {
     position: relative;
     width: 85%;
     margin: 0 auto 2em;
+    border-radius: 2em;
+}
+
+section {
+    margin: 2em 0;
+    border-radius: 2em;
+    border: var(--background-color2) 1px solid;
+    padding: 1.5em;
+}
+
+section:hover {
+    border-color: var(--active);
+    transition: 500ms;
+}
+
+h2 {
+    background-color: var(--containers);
+    padding: .3em;
 }
 
 #about {
@@ -119,6 +139,21 @@ main {
 
 #projects {
     height: 30em;
+}
+
+.tempBox {
+    border: dotted var(--text-color) 1px;
+    width: 20%;
+    height: 20em;
+    margin: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 #languages {
@@ -132,4 +167,10 @@ footer {
     bottom: 0;
     height: 10em;
     margin-top: 6em;
+}
+
+.footHeader {
+    width: 100%;
+    background-color: var(--active);
+    height: 2em;
 }
