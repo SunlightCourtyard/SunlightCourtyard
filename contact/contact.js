@@ -1,6 +1,3 @@
-const navButtons = document.querySelector('nav').querySelectorAll('a');
-const lightbutton = document.querySelector('button');
-
 function lightChanger() {
     const body = document.querySelector('body');
     const icon = document.getElementById('modeIcon');
@@ -18,13 +15,4 @@ function lightChanger() {
     }
 }
 
-
-
-navButtons.forEach(button => {  
-    button.addEventListener("click", function() {
-        navButtons.forEach(button => button.classList.remove("active"));
-        this.classList.add("active");
-    })
-});
-
-lightbutton.onclick = lightChanger;
+document.querySelector('nav').querySelector('button').onclick = lightChanger;

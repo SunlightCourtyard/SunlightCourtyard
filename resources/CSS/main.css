@@ -25,10 +25,10 @@
     --background-color2: #fff;
     --text-color: #333;
     --text-colorflip: #fff;
-    --containers: #50e3c2;
-    --accent: #4a90e2;
-    --secondary-accent: #6ba7f2;
-    --active: #1e3a8a;
+    --containers: #dee;
+    --accent: #2c4251;
+    --secondary-accent: #ff4365;
+    --active: #3f5361;
     --active-border: #6ba7f2;
 }
 
@@ -130,7 +130,7 @@ section:hover {
 
 h2 {
     background-color: var(--containers);
-    padding: .3em;
+    padding: 0.5em;
 }
 
 #about {
@@ -166,11 +166,13 @@ footer {
     width: 100%;
     bottom: 0;
     height: 10em;
-    margin-top: 6em;
+    margin-top: 8em;
+    color: var(--text-color);
+    background: linear-gradient(180deg, var(--secondary-accent) 20%, var(--background-color) 90%);
 }
 
 .footHeader {
     width: 100%;
-    background-color: var(--active);
+    background-color: var(--secondary-accent);
     height: 2em;
 }
