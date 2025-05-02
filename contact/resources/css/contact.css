@@ -1,3 +1,31 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(../../../resources/Fonts/Roboto-VariableFont_wdth\,wght.ttf);
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../../../resources/Fonts/Roboto-Italic-VariableFont_wdth\,wght.ttf);
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../../../resources/Fonts/Montserrat-VariableFont_wght.ttf);
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../../../resources/Fonts/Montserrat-Italic-VariableFont_wght.ttf);
+    font-weight: 100 900;
+    font-style: italic;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,12 +33,103 @@
     list-style: none;
 }
 
+/* Default(darkmode) colours */
+:root {
+    --background-color: #1a1a1a;
+    --background-color2: #181818;
+    --text-color: #fff;
+    --text-colorflip: #000;
+    --containers: #252525;
+    --accent: #e74c3c;
+    --secondary-accent: #9B1C1C;
+    --active: #FF3131;
+    --active-border: #ff0000;
+}
+
+/* Lightmode colours */
+.lightmode {
+    --background-color: #dee4e7;
+    --background-color2: #fff;
+    --text-color: #333;
+    --text-colorflip: #fff;
+    --containers: #dee;
+    --accent: #2c4251;
+    --secondary-accent: #ff4365;
+    --active: #3f5361;
+    --active-border: #6ba7f2;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1em;
+    background-color: var(--containers);
+    color: var(--text-color);
+    height: 5em;
+    font-family: 'Montserrat';
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 15%;
 }
 
 a {
-    display: block;
+    background-color: var(--secondary-accent);
+    color: var(--text-color);
+    padding: 0.5em;
+    border: 2px solid var(--accent);
+    border-radius: 1em;
+    width: max-content;
+    text-decoration: none;
+    font-weight: bolder;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    height: max-content;
+}
+
+a:hover {
+    color: var(--text-colorflip);
+    background-color: var(--accent);
+    border-color: var(--secondary-accent);
+    transition: 500ms;
+}
+
+button {
+    width: 5.6em;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding: 0.2em;
+    border-radius: 1em;
+    transition: 250ms;
+    font-weight: bold;
+    font-size: 1em;
+    font-family: 'Montserrat';
+}
+
+main {
+    background-color: var(--background-color2);
+    color: var(--text-color);
+    width: 85%;
+    margin: 2em auto;
+    padding: 2em;
+    border-radius: 2em;
+    font-family: 'Roboto';
+}
+
+h2 {
+    background-color: var(--containers);
+    padding: 0.5em;
+    font-family: 'Montserrat';
 }

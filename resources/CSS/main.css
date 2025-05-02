@@ -1,3 +1,30 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../Fonts/Montserrat-VariableFont_wght.ttf);
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../Fonts/Montserrat-Italic-VariableFont_wght.ttf);
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../Fonts/Roboto-VariableFont_wdth\,wght.ttf);
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../Fonts/Roboto-Italic-VariableFont_wdth\,wght.ttf);
+    font-style: italic;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -58,6 +85,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    font-family: 'Montserrat';
 }
 
 nav {
@@ -73,7 +101,7 @@ nav a{
     padding: 0.5em;
     border: 2px solid var(--accent);
     border-radius: 1em;
-    width: 5.6em;
+    width: max-content;
     text-align: center;
     text-decoration: none;
     font-weight: bolder;
@@ -100,9 +128,10 @@ button {
     justify-content: space-around;
     color: var(--text-color);
     background-color: var(--background-color);
-    padding: 0.2em 0.2em;
+    padding: 0.2em;
     border-radius: 1em;
     transition: 250ms;
+    font-weight: bold;
 }
 
 /* main and sections style */
@@ -114,6 +143,7 @@ main {
     width: 85%;
     margin: 0 auto 2em;
     border-radius: 2em;
+    font-family: 'roboto';
 }
 
 section {
@@ -131,6 +161,7 @@ section:hover {
 h2 {
     background-color: var(--containers);
     padding: 0.5em;
+    font-family: 'Montserrat';
 }
 
 #about {
@@ -169,6 +200,7 @@ footer {
     margin-top: 8em;
     color: var(--text-color);
     background: linear-gradient(180deg, var(--secondary-accent) 20%, var(--background-color) 90%);
+    font-family: 'Roboto';
 }
 
 .footHeader {
