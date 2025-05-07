@@ -30,7 +30,19 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    scroll-margin-top: 5em;
+    scroll-margin-top: 9.25em;
+}
+
+@media only screen and (min-width: 493px) {
+    * {
+        scroll-margin-top: 7em;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    * {
+        scroll-margin-top: 3em;
+    }
 }
 
 /* Default(darkmode) colours */
@@ -61,7 +73,6 @@
 
 body {
     line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
     background-color: var(--background-color);
 }
 
@@ -78,11 +89,13 @@ input, button, textarea, select {
 header {
     background-color: var(--containers);
     top: 0;
-    height: 5em;
+    height: max-content;
     width: 100%;
+    padding: 0.5em;
     position: fixed;
     z-index: 2;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     font-family: 'Montserrat';
@@ -90,21 +103,24 @@ header {
 
 nav {
     display: inline-flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     position: relative;
-    width: 75%;
+    width: 100%;
 }
 
 nav a{
     background-color: var(--secondary-accent);
     color: var(--text-color);
-    padding: 0.5em;
+    padding: 0.2em;
+    margin: 0.3em auto;
     border: 2px solid var(--accent);
     border-radius: 1em;
-    width: max-content;
+    width: 6.5em;
     text-align: center;
     text-decoration: none;
     font-weight: bolder;
+    font-size: large;
 }
 
 nav a:hover {
@@ -119,11 +135,11 @@ nav a:hover {
     color: var(--text-colorflip);
     transition: 1s;
     border: 2px solid var(--active-border);
-    width: 6em;
+    width: 7em;
 }
 
 button {
-    width: 5.6em;
+    width: max-content;
     display: flex;
     justify-content: space-around;
     color: var(--text-color);
@@ -134,23 +150,53 @@ button {
     font-weight: bold;
 }
 
+button p {
+    padding: 0 0.1em;
+}
+
+@media only screen and (min-width: 768px) {
+    header {
+        justify-content: end;
+        flex-wrap: wrap-reverse;
+    }
+
+    button {
+        margin: 0 1em;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    header {
+        justify-content: space-between;
+    }
+
+    nav {
+        width: max-content;
+    }
+
+    nav a {
+        margin: 0 0.2em;
+    }
+}
+
 /* main and sections style */
 main {
     background-color: var(--background-color2);
     color: var(--text-color);
-    top: 5em;
+    top: 9em;
     position: relative;
-    width: 85%;
+    width: 100%;
     margin: 0 auto 2em;
     border-radius: 2em;
     font-family: 'roboto';
 }
 
 section {
-    margin: 2em 0;
+    margin: 1em 0;
     border-radius: 2em;
     border: var(--background-color2) 1px solid;
     padding: 1.5em;
+    height: max-content;
 }
 
 section:hover {
@@ -164,31 +210,55 @@ h2 {
     font-family: 'Montserrat';
 }
 
-#about {
-    height: 30em;
+@media only screen and (min-width: 493px) {
+    main {
+        top: 6em;
+    } 
 }
 
+@media only screen and (min-width: 1024px) {
+    main {
+        top: 3em;
+    }
+}
+
+/* Projects Section */
 #projects {
-    height: 30em;
-}
-
-.tempBox {
-    border: dotted var(--text-color) 1px;
-    width: 20%;
-    height: 20em;
-    margin: 2em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: max-content;
 }
 
 .flex {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
-#languages {
-    height: 30em;
+.tempBox {
+    border: dotted var(--text-color) 1px;
+    width: 80%;
+    height: 20em;
+    margin: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+@media only screen and (min-width: 768px) {
+    .tempBox {
+        flex-basis: 30%;
+    }
+}
+
+@media only screen and (min-width: 1360px) {
+    .tempBox {
+        flex-basis: 20%;
+    }
+}
+
+/* Skills Section */
+#skills {
+    height: 20em;
 }
 
 /* footer style */
@@ -197,7 +267,7 @@ footer {
     width: 100%;
     bottom: 0;
     height: 10em;
-    margin-top: 8em;
+    margin-top: 10em;
     color: var(--text-color);
     background: linear-gradient(180deg, var(--secondary-accent) 20%, var(--background-color) 90%);
     font-family: 'Roboto';
@@ -207,4 +277,8 @@ footer {
     width: 100%;
     background-color: var(--secondary-accent);
     height: 2em;
+}
+
+footer p {
+    padding: 1em;
 }

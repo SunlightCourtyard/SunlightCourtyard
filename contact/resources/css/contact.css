@@ -63,28 +63,39 @@ body {
     background-color: var(--background-color);
 }
 
+/* Header */
 header {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
-    padding: 1em;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.8em;
+    padding-right: 0.5em;
     background-color: var(--containers);
     color: var(--text-color);
-    height: 5em;
+    height: max-content;
     font-family: 'Montserrat';
 }
 
+@media only screen and (min-width: 572px) {
+    header {
+        padding-right: 0.8em;
+    }
+}
+
 nav {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: space-around;
-    width: 15%;
+    justify-content: space-between;
+    width: max-content;
 }
 
 a {
     background-color: var(--secondary-accent);
     color: var(--text-color);
-    padding: 0.5em;
+    padding: 0.3em;
+    margin-right: 0.2em;
     border: 2px solid var(--accent);
     border-radius: 1em;
     width: max-content;
@@ -104,7 +115,7 @@ a:hover {
 }
 
 button {
-    width: 5.6em;
+    width: max-content;
     display: inline-flex;
     justify-content: space-around;
     align-items: center;
@@ -118,12 +129,26 @@ button {
     font-family: 'Montserrat';
 }
 
+button p {
+    display: none;
+}
+
+@media only screen and (min-width: 532px) {
+    button {
+        margin-left: 1em; 
+    }
+    
+    button p {
+        display: inline;
+    }
+}
+
 main {
     background-color: var(--background-color2);
     color: var(--text-color);
-    width: 85%;
+    width: 100%;
     margin: 2em auto;
-    padding: 2em;
+    padding: 1em;
     border-radius: 2em;
     font-family: 'Roboto';
 }
@@ -132,4 +157,8 @@ h2 {
     background-color: var(--containers);
     padding: 0.5em;
     font-family: 'Montserrat';
+}
+
+main p {
+    padding: 0.5em;
 }

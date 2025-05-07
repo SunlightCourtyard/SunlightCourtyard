@@ -1,4 +1,4 @@
-const navButtons = document.querySelector('nav').querySelectorAll('a');
+const navButtons = Array.from(document.querySelector('nav').querySelectorAll('a')).slice(0, -1);
 const lightbutton = document.querySelector('button');
 
 function lightChanger() {
@@ -21,9 +21,17 @@ function lightChanger() {
 
 
 navButtons.forEach(button => {  
-    button.addEventListener("click", function() {
-        navButtons.forEach(button => button.classList.remove("active"));
-        this.classList.add("active");
+    button.addEventListener("click", function(event) {
+        event.preventDefault();
+        const targetId = this.getAttribute("href").substring(1);
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+            targetSection.scrollIntoView({behavior: "smooth", block: "start" });
+            navButtons.forEach(button => button.classList.remove("active"));
+            this.classList.add("active");
+        }
+        
     })
 });
 
